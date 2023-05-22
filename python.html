@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="icon" type="image/png" href="favicon.png">
         <link rel="stylesheet" href="./bluegold.css">
         <!--Navigation bar -->
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -8,53 +9,33 @@
         <script>
             $(function () {
                 $("#nav-placeholder").load("navbar.html");
-                _callback();
+                $("#footer-placeholder").load("footer.html");
             });
         </script>
-        <div id="nav-placeholder"></div>
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        <style>
-            body,
-            h1,
-            h2,
-            h3,
-            h4,
-            h5 {
-                font-family: "Poppins", sans-serif
-            }
-
-            body {
-                font-size: 16px;
-            }
-
-            /*Preview link*/
-            .link-container {
-            position: relative;
-            display: inline-block;
-            }
-
-            .preview {
-            display: none;
-            position: absolute;
-            z-index: 1;
-            background-color: #f9f9f9;
-            border: 1px solid #ccc;
-            padding: 10px;
-            }
-
-            .link-container:hover .preview {
-            display: block;
-            }
-            /*End of Preview*/
-        </style>
+        <link rel="stylesheet" href="./table_style.css">
     </head>
-
-    <body data-new-gr-c-s-check-loaded="14.1102.0" data-gr-ext-installed="">
-            <h1 style="color: #000000"><b>Learn Python</b></h1>
+    <body>
+        <header>
+            <div id="nav-placeholder"></div>
+        </header>
+        <main>
+            <h2><b>Learn Python</b></h2>
+            <br>
+            <p>Python is a great first language to learn! Feel free to follow along with the following tutorials. 
+                They will first introduce you to Python and ultimately guide you to building your first applications.</p>
+            <br>
+            <p>Python is the most used programing language today and is used across industries.</p>
+            <br>
+            <p>These tutorials also prepare you for the PCEP and PCAP Certifications provided by the <a target="_blank" href="https://pythoninstitute.org/">Python Institute</a>. 
+                You can also <a target="_blank" href="https://edube.org/study/pe1">enroll</a> in the free Python course provide by the Python Institute that prepares you for these certifications.</p>
+                
+                
             <div class="row">
                 <table class="table condensed table-striped">
                     <thead>
                     </thead>
+                    <!-- For embeded links replace youtu.be/ with www.youtube.com/embed/-->
                     <tbody>
                         <tr>
                             <td colspan="4" class="text-center text-strong"
@@ -73,19 +54,452 @@
                                     </div>
                                 </div>
                             </td>
-                            <td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 2: Downloading Visual Studio Code and Linking to Coding</td>
+                            <td class="text-center text-strong">
                                 <div class="link-container">
-                                    <a target="text-center text-strong"
-                                        href="#"
-                                        class="label label-success">GitHub</a>
+                                    <a target="_blank" href="https://youtu.be/KAh5BPQB6vs" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/KAh5BPQB6vs"></iframe>
+                                    </div>
                                 </div>
-                                <div class="preview">
-                                    <iframe src="https://www.youtube.com/embed/sc99AKQ_j0o"></iframe>
+                            </td>
+                            <td></td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="text-center text-strong">Lesson 3: Writing Your 1st Program</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/sc99AKQ_j0o" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/sc99AKQ_j0o"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/Tutorial%203" class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 52: Linked Lists</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/plJOc4FbOsU" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/plJOc4FbOsU"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial%2052"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 53: Reverse a Linked List</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/OnOluokDvKY" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/OnOluokDvKY"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial%2053"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 54: FizzBuzz</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://www.youtube.com/embed/FrckCXDB0xQ" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://youtube.com/embed/7KqQdbCB-9g"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial%2054"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 55: Binary Trees</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/FrckCXDB0xQ" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/FrckCXDB0xQ"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial%2055"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 56: Inverting Binary Trees</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/s5tdrqbbxRA" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/s5tdrqbbxRA"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial%2056"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 57: Automatically Login to Any Website</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/blS8nIKbzD0" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://youtube.com/embed/blS8nIKbzD0"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial%2057"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 58: Datetime Library</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/FKfJXPZ7Ja4" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/FKfJXPZ7Ja4"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial%2058"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 59: Emojis</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/35INXXAkDg0" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/35INXXAkDg0"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial%2059"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 60: Packing and Unpacking Tuples and Dictionaries</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/Kjx2fiUOypQ" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com//Kjx2fiUOypQ"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial%2060"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 61: GUI Calculator</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/GTXN-yNgAxc" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/GTXN-yNgAxc"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial%2061"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 62: Writing Clean and Professional Python Code</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/ob0zwayGYF4" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/ob0zwayGYF4"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial%2062"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 63: Imperative vs Declarative Programming</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/Rb_3EciynEg" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/Rb_3EciynEg"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial%2063"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 64: Internet Speed Test</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/pSiPdFTVbfc" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/pSiPdFTVbfc"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial%2064"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 65: Enumeration</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/PdaXTam0Sak" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/PdaXTam0Sak"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial%2065"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 66: Caesar Cypher</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/k1t6AH9jNXg" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/9T5Zb7GZFtY"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial%2066"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 67: Intro to Jinja</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/k1t6AH9jNXg" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/k1t6AH9jNXg"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial%2067"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 68: Major Improvements to Python - Version 3.10 Just Released</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/uKv30JTX10w" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/uKv30JTX10w"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial%2068"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 69: How the Walrus Operator Can Speed Up Your Python Code</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/EcEock6Ao_A" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/EcEock6Ao_A"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial%2069"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 70: How to Create a Python Virtual Environment</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/rlzWLgUQhLE" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/rlzWLgUQhLE"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial%2070"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 71: Python GUI Timer</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/1D1FOwMg9Hc" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/Wz8YKizoM9g"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/Tutorial%2071"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 72: Automatic Wordle Solver in Python</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/1D1FOwMg9Hc" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/1D1FOwMg9Hc"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial_72"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 73: Automatic Wordle Solver in Python</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/6_tKmnD44GI" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/6_tKmnD44GI"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial_73"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center text-strong">Lesson 74: The Top 10 WORST Programming Mistakes in Python</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/hIP3qOhi-B8" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/hIP3qOhi-B8"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial_74"
+                                        class="label label-success">Github</a>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="text-center text-strong">Lesson 75: Solve Sudoku Instantly Using Python</td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://youtu.be/jM80SmTQT1k" class="label label-caution">Video</a>
+                                    <div class="preview">
+                                        <iframe src="https://www.youtube.com/embed/jM80SmTQT1k"></iframe>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center text-strong">
+                                <div class="link-container">
+                                    <a target="_blank" href="https://github.com/JonathanKarr33/YouTube/tree/master/Python/tutorial_75"
+                                        class="label label-success">Github</a>
                                 </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+        </main>
+        <footer>
+            <div id="footer-placeholder"></div>
+        </footer>
     </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
 </html>
