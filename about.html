@@ -1,27 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="icon" type="image/png" href="favicon.png">
-        <link rel="stylesheet" href="./bluegold.css">
-        <!--Navigation bar -->
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script>
-            $(function () {
-                $("#nav-placeholder").load("navbar.html");
-                $("#footer-placeholder").load("footer.html");
-            });
-        </script>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <header>
-            <div id="nav-placeholder"></div>
-        </header>
-        <main>
 
-        </main>
-        <footer>
-            <div id="footer-placeholder"></div>
-        </footer>
-    </body>
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="./bluegold.css">
+    <!--Navigation bar -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("navbar.html");
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .text {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .photo {
+            flex: 1;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="nav-placeholder"></div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="text">
+                <h2>About</h2>
+                <p>I am Jonathan Karr, a rising senior at the <a target="_blank"
+                        href="http://engineering.nd.edu/">University of Notre Dame</a>
+                    with a major in <a target="_blank" href="http://cse.nd.edu/">Computer Science</a> and a
+                    concentration in Cyber Security in the <a target="_blank" href="http://engineering.nd.edu/">College
+                        of Engineering.</a> I've also explored my intrests are Notre Dame through
+                    the minors of <a target="_blank" href="https://theology.nd.edu/">Theology</a> and
+                    <a target="_blank"
+                        href="https://engineering.nd.edu/departments-programs/undergraduate-programs/minor-in-engineering-corporate-practice/">Engineering
+                        Corporate Practice</a>.
+                    My computer science intrests are in Knowledge Graphs and data analytics. I'm excited to use and
+                    continue to develop my skills in order to be a force for good in the world!
+                </p>
+            </div>
+            <div class="photo">
+                <img src="jonathan_karr_photo.jpg" alt="Jonathan Karr Photo">
+            </div>
+        </div>
+        <br><br>
+        <h3>Undergraduate Research</h3>
+        <p>I am conducting undergraduate research reguarding Knowledge Graphs and Natural Language Processing at Notre Dame’s
+        Center for Research Computing. <br><!--I enjoy partaking in this research in order to solve Naval problems. -->
+        I enjoy utilizing data analitics through knowledge graphs in order to solve real world problems. <br>
+        The rise of AI resources such as ChatGPT has allowed our research to excelerate over the past semester. <br>
+        The projects are funded by the Office of Naval Research and service the DoD.</p>
+        <br>
+        <h3>Qualcomm Internships</h3>
+        <p>I have enjoyed getting to intern at Qualcomm over the past three summers. <br><br>
+        During the summer of 2021, I created a dashboard for the audio team to improve the functionality of the KATS (Kymera Automated Test Systems) framework. <br>
+        As a result, the team uses this display on a daily basis. <br>
+        This project utilized Python, HTML, CSS, JavaScript, Jinja, and Bootstrap. <br>
+        <br>
+        During the summer of 2022, I created unit tests in C# for QACT (Qualcomm Audio Calibration Tool). <br>
+        As a result, the team is able to check code functionality easily prior to a new release. <br>
+        <br>
+        Currently I'm using CMake to create a build system that allows for code to be run across different platforms. <br>
+        </p>
+        <br>
+        <h3>The Impact of Teaching</h3>
+        <p>wheter it is 1:1 helping a student or teaching tens-of-thousands of students through my Youtube videos.</p>
+        <br>
+        <h3>Robotic Football</h3>
+        <p></p>
+        <br>
+        <h3>Student Government: Departments of Technology and Faith</h3>
+        <p></p>
+        <br>
+        <h3>Running Club</h3>
+        <p></p>
+        <br>
+        <h3>Engineering Leadership Council</h3>
+        <p></p>
+        <br>
+        <h3>Stanford Hall</h3>
+        <p></p>
+        <br>
+    </main>
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+</body>
+
 </html>
