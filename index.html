@@ -15,29 +15,28 @@
         <style>
             .container {
                 display: flex;
+                flex-direction: row;
                 align-items: center;
             }
-        
+
             .text {
                 flex: 1;
-                padding-right: 20px;
+                padding: 20px;
             }
-        
-            .photo {
+
+            .image {
                 flex: 1;
-                text-align: right;
-                max-width: 100%;  
-                height: auto;
-                overflow: hidden;
             }
-            .image-container img {
+
+            .image img {
                 max-width: 100%;
                 height: auto;
-                display: block;
             }
-            .footer {
-                position: absolute;
-                bottom: 0;
+
+            @media (max-width: 800px) {
+                .container {
+                    flex-direction: column-reverse;
+                }
             }
         </style>
     </head>
