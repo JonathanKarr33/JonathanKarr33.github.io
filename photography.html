@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!--Navigation bar -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("navbar.html");
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .text {
+            flex: 1;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="nav-placeholder"></div>
+    </header>
+    <main>
+        <a href="https://photos.app.goo.gl/wyHeaeNTbd1qBsSk6">
+        <h3>Niles Viking Stampede (8/18/23)</h3>
+            <img
+                src="https://lh3.googleusercontent.com/pw/AIL4fc8hh4s-TQlrPYa12P0we4IkufZ2EISBB719UVQ83GWBDgeHh05genU53r50g3aUk3Ca3dDYJ5YKTNewZRr3GuOhuFxiRpRlCto7Ml5kZ8G2yP_JMjs=w600-h315-p-k" />
+        </a>
+    </main>
+</body>
+
+</html>
