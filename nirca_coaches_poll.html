@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!--Navigation bar -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("navbar.html");
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .embedded-photo {
+            max-width: 300px;
+            max-height: 150px;
+            border: none;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="nav-placeholder"></div>
+    </header>
+    <main>
+        <h2>NIRCA Coaches Poll</h2>
+        <p>The NIRCA Cross Country Coaches Poll will be published here</p>
+        <a target="_blank" href="https://docs.google.com/document/d/1pvThZTIswdyDz4NqhpIgQw2bu0lIzZcXC1rWaPd1aQU/edit?usp=sharing">
+            <p>Read this Google Doc to becoming a voting member</p>
+        </a>
+        <a target="_blank" href="https://docs.google.com/spreadsheets/d/1cIwHwz_PVK6LOXd1VI2ZGrJXWTdFkKebws0SIK-9vjI/edit?usp=sharing">
+            <p>Google Sheet: All NIRCA Results from both NIRCA and Non-NIRCA Races</p>
+        </a>
+        <a target="_blank" href="https://docs.google.com/spreadsheets/d/1gwoIky1w35jWTdXTtTsNXdeV0C6csl5NbBkytR2Er10/edit?usp=sharing">
+            <p>Google Sheet: Week 1 NIRCA Cross Country Coaches Poll Rankings</p>
+        </a>
+    </main>
+</body>
+
+</html>
