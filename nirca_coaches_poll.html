@@ -1,55 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <link rel="icon" type="image/png" href="favicon.png">
+        <!--Navigation bar -->
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+            $(function () {
+                $("#nav-placeholder").load("navbar.html");
+                $("#footer-placeholder").load("footer.html");
+            });
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
 
-<head>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <!--Navigation bar -->
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script>
-        $(function () {
-            $("#nav-placeholder").load("navbar.html");
-            $("#footer-placeholder").load("footer.html");
-        });
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        .container {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
 
-        .text {
-            flex: 1;
-            padding: 20px;
-        }
+            th,
+            td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: center;
+                width: 33%;
+            }
 
-        .embedded-photo {
-            max-width: 300px;
-            max-height: 150px;
-            border: none;
-            overflow: hidden;
-        }
-    </style>
-</head>
+            th {
+                background-color: #f2f2f2;
+            }
 
-<body>
-    <header>
-        <div id="nav-placeholder"></div>
-    </header>
-    <main>
-        <h2>NIRCA Coaches Poll</h2>
-        <p>The NIRCA Cross Country Coaches Poll will be published here</p>
-        <a target="_blank" href="https://docs.google.com/document/d/1pvThZTIswdyDz4NqhpIgQw2bu0lIzZcXC1rWaPd1aQU/edit?usp=sharing">
-            <p>Read this Google Doc to becoming a voting member</p>
-        </a>
-        <a target="_blank" href="https://docs.google.com/spreadsheets/d/1cIwHwz_PVK6LOXd1VI2ZGrJXWTdFkKebws0SIK-9vjI/edit?usp=sharing">
-            <p>Google Sheet: All NIRCA Results from both NIRCA and Non-NIRCA Races</p>
-        </a>
-        <a target="_blank" href="https://docs.google.com/spreadsheets/d/1gwoIky1w35jWTdXTtTsNXdeV0C6csl5NbBkytR2Er10/edit?usp=sharing">
-            <p>Google Sheet: Week 1 NIRCA Cross Country Coaches Poll Rankings</p>
-        </a>
-    </main>
-</body>
+            thead {
+                position: sticky;
+                top: 0;
+                background-color: #fff;
+                text-align: center;
+            }
 
+            table tbody {
+                max-height: 400px;
+                overflow-y: auto;
+                width: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div id="nav-placeholder"></div>
+        </header>
+        <main>
+            <h2>NIRCA Coaches Poll</h2>
+            <p>The week 1 NIRCA Cross Country Coaches Poll will be published here on Thursday evening (9/14/2023).</p>
+            <p>Below you can find a Google sheet with all of the NIRCA cross country results throughout the season.</p>
+            <p>Each university can have one voting member. If there are no voting members from your univesity, consider becoming one by reading the Google Doc below.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="3" style="text-align:center">Week 1 Men NIRCA Cross Country Coaches Poll</th>
+                    </tr>
+                    <tr>
+                        <th style="text-align:center">Ranking</th>
+                        <th style="text-align:center">University</th>
+                        <th style="text-align:center">Pts</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>University 1</td>
+                        <td>X</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>University 2</td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>University 25</td>
+                        <td>Z</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Other Receiving Votes:<br></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="3" style="text-align:center">Week 1 Women NIRCA Cross Country Coaches Poll</th>
+                    </tr>
+                    <tr>
+                        <th style="text-align:center">Ranking</th>
+                        <th style="text-align:center">University</th>
+                        <th style="text-align:center">Pts</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>University 1</td>
+                        <td>X</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>University 2</td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>University 25</td>
+                        <td>Z</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Other Receiving Votes:<br></p>
+            <p><br>Voting Members: Jonathan Karr (Notre Dame), Ben Darden (Virginia Tech), and Racel Weghorst (Virginia)<br>We would love you or your university to have a voting member, see Google Doc below.</p>
+            <a target="_blank"
+                href="https://docs.google.com/document/d/1pvThZTIswdyDz4NqhpIgQw2bu0lIzZcXC1rWaPd1aQU/edit?usp=sharing">
+                <p>Read this Google Doc to becoming a voting member</p>
+            </a>
+            <a target="_blank"
+                href="https://docs.google.com/spreadsheets/d/1cIwHwz_PVK6LOXd1VI2ZGrJXWTdFkKebws0SIK-9vjI/edit?usp=sharing">
+                <p>Google Sheet: All NIRCA Results from both NIRCA and Non-NIRCA Races</p>
+            </a>
+            <a target="_blank"
+                href="https://docs.google.com/spreadsheets/d/1gwoIky1w35jWTdXTtTsNXdeV0C6csl5NbBkytR2Er10/edit?usp=sharing">
+                <p>Google Sheet: Week 1 NIRCA Cross Country Coaches Poll Rankings</p>
+            </a>
+        </main>
+    </body>
 </html>
