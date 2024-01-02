@@ -1,180 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <!-- Navigation bar -->
-    
-    <script>
-        $(function () {
-            $("#nav-placeholder").load("navbar.html");
-            $("#footer-placeholder").load("footer.html");
-        });
-    </script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-    
-        header {
-            /* Add any additional styling for the header if needed */
-        }
-    
-        main {
-            padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-    
-        h2 {
-            text-align: center;
-        }
-    
-        p {
-            text-align: center;
-        }
-    
-        .photo-link {
-            text-decoration: none;
-            color: inherit;
-            text-align: center;
-            display: block;
-            position: relative;
-            margin-bottom: 20px;
-        }
-    
-        .photo-link h3 {
-            position: absolute;
-            top: 90%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            margin: 0;
-            color: white;
-            /* Adjust the text color as needed */
-            font-size: 1.5em;
-            /* Adjust the font size as needed */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            /* Optional text shadow */
-        }
-    
-        .photo {
-            max-width: 350px;
-            /* Set the maximum width for the photo container */
-            margin: 0 auto;
-            /* Center the photo container */
-        }
-    
-        .embedded-photo {
-            max-width: 100%;
-            /* Ensure the photo itself does not exceed the container width */
-            height: auto;
-            border: none;
-            overflow: hidden;
-            display: block;
-            margin: 0 auto;
-        }
-    
-        @media (max-width: 800px) {
-            main {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    <head>
+        <link rel="icon" type="image/png" href="favicon.png">
+        <!--Navigation bar -->
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+            $(function () {
+                $("#nav-placeholder").load("navbar.html");
+                $("#footer-placeholder").load("footer.html");
+            });
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
             }
-        }
-    
-        @media (max-width: 600px) {
-            main {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+            .text {
+                flex: 1;
+                padding: 20px;
             }
-        }
-    
-        @media (max-width: 400px) {
-            main {
-                grid-template-columns: 1fr;
+
+            .embedded-photo {
+                max-width: 300px;
+                max-height: 150px;
+                border: none;
+                overflow: hidden;
             }
-        }
-    </style>
+        </style>
+    </head>
 
-</head>
-
-<body>
-    <header>
-        <div id="nav-placeholder"></div>
-    </header>
-    <main>
-        <h2>Photography</h2>
-        <p>Feel free to browse the Google Photo Albums below to see my past photos. If you would like me to photograph
-            an event, feel free to reach out to me.</p>
-
-        <!-- Photo Albums -->
-        <a class="photo-link" target="_blank" href="https://photos.app.goo.gl/MzohQELKpimfjcCf9">
-            <h3>2023 Stanford Mass (12/9/23)</h3>
-            <img class="embedded-photo" src="cover_photos/stanford_2023_Mass_cover_photo.jpg" alt="Stanford Mass">
-        </a>
-        <a class="photo-link" target="_blank" href="https://photos.app.goo.gl/GY6NpPDH6EATVuzf9">
-            <h3>2023 Blue Gold Invitational (12/1/23)</h3>
-            <img class="embedded-photo" src="cover_photos/2023_blue_gold_invitational.jpg" alt="Blue Gold Invitational">
-        </a>
-        <a class="photo-link" target="_blank" href="https://photos.app.goo.gl/T2bkNb6Umpdc4P4JA">
-            <h3>Stanford Hall Christmas Decorating (11/29/23)</h3>
-            <img class="embedded-photo" src="cover_photos/stanford_2023_christmas.jpg"></img>
-        </a>
-        <a class="photo-link" target="_blank" href="https://photos.app.goo.gl/idrVDqMty8AT6YnYA">
-            <h3>Stanford Hall Photo and Flag Football Championship (11/19/23)</h3>
-            <img class="embedded-photo" src="cover_photos/stanford_2023_photo.jpg"></img>
-        </a>
-        <a class="photo-link" target="_blank" href="https://photos.app.goo.gl/cLbRrQC4RapN2DvQ7">
-            <h3>NIRCA Cross Country Nationals (11/11/23)</h3>
-            <img class="embedded-photo" src="cover_photos/nirca_cross_nats_2023.jpg"></img>
-        </a>
-        <a class="photo-link" target="_blank" href="https://photos.app.goo.gl/HEXkFPbSbYYSQ8hw6">
-            <h3>NIRCA Great Lakes Regional (10/28/23)</h3>
-            <img class="embedded-photo" src="cover_photos/nirca_regionals_2023_cover_photo.jpg"></img>
-        </a>
-        <a class="photo-link" target="_blank" href="https://photos.app.goo.gl/ms5B9EyVYTX9CJAg9">
-            <h3>Bradley Pink Classic (10/13/23)</h3>
-            <img class="embedded-photo" src="cover_photos/bradley_pink_classic_cover_photo.jpg"></img>
-        </a>
-        <a class="photo-link" target="_blank" href="https://photos.app.goo.gl/gUWFd8Lu529K8yGm9">
-            <h3>Irish Invitational (10/6/23)</h3>
-            <img class="embedded-photo" src="cover_photos/irish_invite_cover_photo.jpg"></img>
-        </a>
-        <a class="photo-link" target="_blank" href="https://photos.app.goo.gl/5fr5ALG1SvoX4cQY8">
-            <h3>Joe Piane Invitational (9/30/23)</h3>
-            <img class="embedded-photo" src="cover_photos/joe_piane_cover_photo.jpg"></img>
-        </a>
-        <a class="photo-link" target="_blank" href="https://photos.app.goo.gl/46z2rkgHV9NvJb9m9">
-            <h3>National Catholic Invitational (9/15/23)</h3>
-            <img class="embedded-photo" src="cover_photos/national_catholic_cover_photo.jpg"></img>
-        </a>
-        <a class="photo-link" target="_blank" href="https://photos.app.goo.gl/M3dxoHC8p6EwqqqZ7">
-            <h3>Boiler Up Invitational (9/9/23)</h3>
-            <img class="embedded-photo" src="cover_photos/boiler_up_2023_cover_photo.jpg"></img>
-        </a>
-        <a class="photo-link" target="_blank" href="https://photos.app.goo.gl/DgdrM4MwPuUs6MZb7">
-            <h3>Stanford Hall Pirate Dance (9/8/23)</h3>
-            <img class="embedded-photo" src="cover_photos/pirate_dance_cover_photo.jpg"></img>
-        </a>
-        <a class="photo-link" target="_blank" href="https://photos.app.goo.gl/bjSXZxVjZFj48hPRA">
-            <h3>Winrow-Valparaiso Invitational (9/1/23)</h3>
-            <img class="embedded-photo" src="cover_photos/nd_at_valpo_cover_photo.jpeg"></img>
-        </a>
-        <a class="photo-link" target="_blank" href="https://photos.app.goo.gl/2mjh3r17xECwoE2n6">
-            <h3>Stanford Hall Welcome Weekend (8/20/23)</h3>
-            <img class="embedded-photo" src="cover_photos/stanford_welcome_weekend_cover_photo.jpeg"></img>
-        </a>
-        <a tclass="photo-link" arget="_blank" href="https://photos.app.goo.gl/wyHeaeNTbd1qBsSk6">
-            <h3>Niles Viking Stampede (8/18/23)</h3>
-            <img class="embedded-photo" src="cover_photos/viking_stampede_cover_photo.jpeg"></img>
-        </a>
-    </main>
-    <!-- Footer -->
-    <footer>
-        <div id="footer-placeholder"></div>
-    </footer>
-</body>
-
+    <body>
+        <header>
+            <div id="nav-placeholder"></div>
+        </header>
+        <main>
+            <h2>Photography</h2>
+            <p>Feel free to browse the Google Photo Albums below to see my past photos. If you would like me to photograph
+                an event feel free to reach out to me.</p>
+            <a target="_blank" href="https://photos.app.goo.gl/MzohQELKpimfjcCf9">
+                <h3>2023 Stanford Mass (12/9/23)</h3>
+                <img class="embedded-photo" src="cover_photos/stanford_2023_Mass_cover_photo.jpg"></img>
+            </a>
+            <a target="_blank" href="https://photos.app.goo.gl/GY6NpPDH6EATVuzf9">
+                <h3>2023 Blue Gold Invitational (12/1/23)</h3>
+                <img class="embedded-photo" src="cover_photos/2023_blue_gold_invitational.jpg"></img>
+            </a>
+            <a target="_blank" href="https://photos.app.goo.gl/T2bkNb6Umpdc4P4JA">
+                <h3>Stanford Hall Christmas Decorating (11/29/23)</h3>
+                <img class="embedded-photo" src="cover_photos/stanford_2023_christmas.jpg"></img>
+            </a>
+            <a target="_blank" href="https://photos.app.goo.gl/idrVDqMty8AT6YnYA">
+                <h3>Stanford Hall Photo and Flag Football Championship (11/19/23)</h3>
+                <img class="embedded-photo" src="cover_photos/stanford_2023_photo.jpg"></img>
+            </a>
+            <a target="_blank" href="https://photos.app.goo.gl/cLbRrQC4RapN2DvQ7">
+                <h3>NIRCA Cross Country Nationals (11/11/23)</h3>
+                <img class="embedded-photo" src="cover_photos/nirca_cross_nats_2023.jpg"></img>
+            </a>
+            <a target="_blank" href="https://photos.app.goo.gl/HEXkFPbSbYYSQ8hw6">
+                <h3>NIRCA Great Lakes Regional (10/28/23)</h3>
+                <img class="embedded-photo" src="cover_photos/nirca_regionals_2023_cover_photo.jpg"></img>
+            </a>
+            <a target="_blank" href="https://photos.app.goo.gl/ms5B9EyVYTX9CJAg9">
+                <h3>Bradley Pink Classic (10/13/23)</h3>
+                <img class="embedded-photo" src="cover_photos/bradley_pink_classic_cover_photo.jpg"></img>
+            </a>
+            <a target="_blank" href="https://photos.app.goo.gl/gUWFd8Lu529K8yGm9">
+                <h3>Irish Invitational (10/6/23)</h3>
+                <img class="embedded-photo" src="cover_photos/irish_invite_cover_photo.jpg"></img>
+            </a>
+            <a target="_blank" href="https://photos.app.goo.gl/5fr5ALG1SvoX4cQY8">
+                <h3>Joe Piane Invitational (9/30/23)</h3>
+                <img class="embedded-photo" src="cover_photos/joe_piane_cover_photo.jpg"></img>
+            </a>
+            <a target="_blank" href="https://photos.app.goo.gl/46z2rkgHV9NvJb9m9">
+                <h3>National Catholic Invitational (9/15/23)</h3>
+                <img class="embedded-photo" src="cover_photos/national_catholic_cover_photo.jpg"></img>
+            </a>
+            <a target="_blank" href="https://photos.app.goo.gl/M3dxoHC8p6EwqqqZ7">
+                <h3>Boiler Up Invitational (9/9/23)</h3>
+                <img class="embedded-photo" src="cover_photos/boiler_up_2023_cover_photo.jpg"></img>
+            </a>
+            <a target="_blank" href="https://photos.app.goo.gl/DgdrM4MwPuUs6MZb7">
+                <h3>Stanford Hall Pirate Dance (9/8/23)</h3>
+                <img class="embedded-photo" src="cover_photos/pirate_dance_cover_photo.jpg"></img>
+            </a>
+            <a target="_blank" href="https://photos.app.goo.gl/bjSXZxVjZFj48hPRA">
+                <h3>Winrow-Valparaiso Invitational (9/1/23)</h3>
+                <img class="embedded-photo" src="cover_photos/nd_at_valpo_cover_photo.jpeg"></img>
+            </a>
+            <a target="_blank" href="https://photos.app.goo.gl/2mjh3r17xECwoE2n6">
+                <h3>Stanford Hall Welcome Weekend (8/20/23)</h3>
+                <img class="embedded-photo" src="cover_photos/stanford_welcome_weekend_cover_photo.jpeg"></img>
+            </a>
+            <a target="_blank" href="https://photos.app.goo.gl/wyHeaeNTbd1qBsSk6">
+                <h3>Niles Viking Stampede (8/18/23)</h3>
+                <img class="embedded-photo" src="cover_photos/viking_stampede_cover_photo.jpeg"></img>
+            </a>
+        </main>
+    </body>
 </html>
