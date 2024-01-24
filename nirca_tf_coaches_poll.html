@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!--Navigation bar -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("navbar.html");
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            width: 16.66%;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        thead {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        table tbody {
+            max-height: 400px;
+            overflow-y: auto;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="nav-placeholder"></div>
+    </header>
+    <main>
+        <h2>NIRCA Coaches Poll</h2>
+        <p>The Week 1 NIRCA Track & Field poll is here!</p>
+        <p>We are so excited for the 2024 Track & Field Season</p>
+        <p>Below you can find a Google sheet with all of the NIRCA track & field results throughout the season.</p>
+        <p>Each university can have one voting member. If there are no voting members from your univesity, consider
+            becoming one by submitting the Google Form at the bottom of the page.</p>
+        <br>
+        <a target="_blank"
+            href="https://docs.google.com/spreadsheets/d/1ZtgMJ_gWN2zPAWZOAn-4U7PZSic29rdD5Q59qkdTdG8/edit?usp=sharing">
+            <p><b>Google Sheet: All NIRCA Results from both NIRCA and Non-NIRCA Races</b></p>
+        </a>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="5" style="text-align:center">Poll Releases</th>
+                </tr>
+                <tr>
+                    <th style="text-align:center">Poll</th>
+                    <th style="text-align:center">Release Dates (Wednesdays)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Jan 24</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Feb 7</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Feb 21</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Sometime Mid March</td>
+                </tr>
+                <tr>
+                    <td>Pre-Nationals</td>
+                    <td>April 3</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="5" style="text-align:center">Men's Week 1 NIRCA Track & Field Coaches Poll</th>
+                </tr>
+                <tr>
+                    <th style="text-align:center">Ranking</th>
+                    <th style="text-align:center">University Name</th>
+                    <th style="text-align:center">Total Points</th>
+                    <th style="text-align:center">Change</th>
+                    <th style="text-align:center">(High/Low)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Virginia Tech (4)</td>
+                    <td>75</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>University of Michigan</td>
+                    <td>70</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>T-3</td>
+                    <td>University of Connecticut</td>
+                    <td>61</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>T-3</td>
+                    <td>Penn State University</td>
+                    <td>61</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>University of Illinois</td>
+                    <td>58</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Ohio State University</td>
+                    <td>45</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Michigan State University</td>
+                    <td>39</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>University of Virginia</td>
+                    <td>30</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>University of Maryland</td>
+                    <td>24</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>T-10</td>
+                    <td>Stanford University</td>
+                    <td>23</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>T-10</td>
+                    <td>University of North Carolina</td>
+                    <td>23</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Grand Valley State University</td>
+                    <td>20</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>University of Tennessee</td>
+                    <td>17</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>University of Buffalo</td>
+                    <td>15</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>University of Wisconsin</td>
+                    <td>8</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Other Receiving Votes: Purdue University(6), Northeastern University(Northeastern University), University of Minnesota(5), University of
+        Cincinnati(4), Northwestern University(4), University of Pittsburgh(3), University of Massachusetts Amherst(2), and North
+        Carolina State University(1)<br></p>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="5" style="text-align:center">Women's Week 1 NIRCA Track & Field Coaches Poll</th>
+                </tr>
+                <tr>
+                    <th style="text-align:center">Ranking</th>
+                    <th style="text-align:center">University Name</th>
+                    <th style="text-align:center">Total Points</th>
+                    <th style="text-align:center">Change</th>
+                    <th style="text-align:center">(High/Low)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>University of Illinois (4)</td>
+                    <td>75</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>University of Michigan</td>
+                    <td>70</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Virginia Tech</td>
+                    <td>65</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>University of Connecticut</td>
+                    <td>57</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Penn State University</td>
+                    <td>56</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>T-6</td>
+                    <td>University of Virginia</td>
+                    <td>47</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>T-6</td>
+                    <td>Ohio State University</td>
+                    <td>47</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>T-8</td>
+                    <td>Purdue University</td>
+                    <td>32</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>T-8</td>
+                    <td>University of Maryland</td>
+                    <td>32</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Northeastern University</td>
+                    <td>29</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>University of Tennessee</td>
+                    <td>27</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Cornell University</td>
+                    <td>22</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>University of Wisconsin</td>
+                    <td>15</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>University of Notre Dame</td>
+                    <td>9</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Stanford University</td>
+                    <td>8</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Other Receiving Votes: University of North Carolina(5), and North Carolina State University(4)</p><br>
+        <br>
+        <p>Voting Members: Jonathan Karr (Notre Dame), Ben Darden (Virginia Tech), Racel Weghorst (Virginia), Max
+            Manganiello
+            (Northeastern University), Andrew Ye (Ohio State University), Elijah McCauley (Georgia Tech), Zach Duval
+            (University of
+            Michigan), Matthew Denoncourt (North Carolina State University), Ben Shafron (University of Cincinnati),
+            Colin Kilduff
+            (University of Connecticut), Sohan Ganatra (University of Maryland), Christian Jenkins (University of
+            Akron), Matt
+            Stilling (University of Wisconsin), Benjamin Jakabcsin (Georgetown University), Nicholas Pell (UNC Chapel
+            Hill),
+            Calvin Davies (Northwestern University), and Grant Henrichs (University of Nebraska-Lincoln).<br>
+            We would love you or your university to have a voting member, see Google Doc below.</p>
+        <a target="_blank"
+            href="https://docs.google.com/document/d/1pvThZTIswdyDz4NqhpIgQw2bu0lIzZcXC1rWaPd1aQU/edit?usp=sharing">
+            <p>Read this Google Doc to becoming a voting member</p>
+        </a>
+        <a target="_blank"
+            href="https://docs.google.com/spreadsheets/d/1ZtgMJ_gWN2zPAWZOAn-4U7PZSic29rdD5Q59qkdTdG8/edit?usp=sharing">
+            <p><b>Google Sheet: All NIRCA Results from both NIRCA and Non-NIRCA Races</b></p>
+        </a>
+        <a target="_blank"
+            href="https://docs.google.com/spreadsheets/d/1CEFVxaGW6zXJ6tMPfJcfZw9aX6CQO2_35imG7tjL8Qg/edit?usp=sharing">
+            <p>Google Sheet: Week 1 NIRCA Track & Field Coaches Poll Rankings</p>
+        </a>
+        <a target="_blank" href="https://forms.gle/s7THct2DuGN78EiY8">
+            <p>If you would just like to submit a meet result you can do so on this Google Form</p>
+        </a>
+        <a target="_blank" href="https://www.instagram.com/crccoachespoll/">
+            <p>Instagram - Run by Ben Darden (Virginia Tech)</p>
+        </a>
+        <a target="_blank" href="mailto:nircacoachespoll@gmail.com">
+            <p>Email: nircacoachespoll@gmail.com</p>
+        </a>
+        <p>Poll Founded By: Jonathan Karr (University of Notre Dame)</p>
+    </main>
+</body>
+
+</html>
