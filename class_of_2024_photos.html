@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!--Navigation bar -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("navbar.html");
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .text {
+            flex: 1;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="nav-placeholder"></div>
+    </header>
+    <main>
+        <h2>Class of 2024 Photos</h2>
+        <p>Feel free to book a free 90-minute timeslot before</p>
+        <p>On the form specify your starting location</p>
+        <p>It can be a group or individuals or both</p>
+        <p>Feel free to send an email of the photos/locations that you want prior to the session so that we can plan accordingly.</p>
+        <p>Popular locations include the Dome, Basillica, Grotto, St. Mary's Lake, Library Lawn / Football Stadium, your dorm, and whatever you like</p>
+        <p>Prior Photosgraphy can be found <a href="photography.html">here</a>.</p>
+        <p>Your photos will be shared with you by Graduation - Sunday May 19th, 2024 via a private Google Photo Album that you can share with whoever you like. Up to 5 of those photos will be publically accessable on this website.</p>
+        <p>Congratulations, and looking forwards to seeing you soon!</p>
+        
+        <!-- Google Calendar Appointment Scheduling begin -->
+        <iframe
+            src="https://calendar.app.google/uSe4ZVrFfiwNfvFLA"
+            style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+        <!-- end Google Calendar Appointment Scheduling -->
+    </main>
+</body>
+
+</html>
