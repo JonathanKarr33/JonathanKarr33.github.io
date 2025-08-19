@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" type="image/png" href="favicon.png">
+        <title>IJCAI 2025 - Jonathan Karr</title>
+        <!--Navigation bar -->
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+            $(function () {
+                $("#nav-placeholder").load("navbar.html");
+                $("#footer-placeholder").load("footer.html");
+            });
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            html, body {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header {
+                width: 100%;
+            }
+
+            main {
+                width: 100%;
+                max-width: 1200px;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .hero-section {
+                text-align: center;
+                margin-bottom: 40px;
+                padding: 40px 20px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                border-radius: 15px;
+            }
+
+            .hero-section h1 {
+                font-size: 3em;
+                margin-bottom: 20px;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            }
+
+            .hero-section p {
+                font-size: 1.2em;
+                margin-bottom: 0;
+                opacity: 0.95;
+            }
+
+            .section {
+                width: 100%;
+                background: #fff;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                margin-bottom: 30px;
+                box-sizing: border-box;
+            }
+
+            .section h2 {
+                color: #2c3e50;
+                font-size: 2.2em;
+                margin-bottom: 20px;
+                border-bottom: 3px solid #3498db;
+                padding-bottom: 10px;
+            }
+
+            .section h3 {
+                color: #2980b9;
+                font-size: 1.6em;
+                margin: 25px 0 15px 0;
+            }
+
+            .section h4 {
+                color: #34495e;
+                font-size: 1.3em;
+                margin: 20px 0 10px 0;
+            }
+
+            .paper-item {
+                background: #f8f9fa;
+                border-left: 4px solid #3498db;
+                padding: 20px;
+                margin: 20px 0;
+                border-radius: 8px;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            .paper-item:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            }
+
+            .paper-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 15px;
+            }
+
+            .paper-time {
+                background: #e74c3c;
+                color: white;
+                padding: 8px 15px;
+                border-radius: 20px;
+                font-weight: bold;
+                font-size: 0.9em;
+                white-space: nowrap;
+            }
+
+            .paper-title {
+                font-weight: bold;
+                color: #2c3e50;
+                margin-bottom: 10px;
+                font-size: 1.1em;
+            }
+
+            .paper-authors {
+                color: #7f8c8d;
+                margin-bottom: 15px;
+                font-style: italic;
+            }
+
+            .paper-links {
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+
+            .paper-link {
+                display: inline-block;
+                padding: 8px 16px;
+                background: #3498db;
+                color: white;
+                text-decoration: none;
+                border-radius: 6px;
+                font-size: 0.9em;
+                transition: background 0.3s ease;
+            }
+
+            .paper-link:hover {
+                background: #2980b9;
+                color: white;
+                text-decoration: none;
+            }
+
+            .paper-link.disabled {
+                background: #bdc3c7;
+                cursor: not-allowed;
+            }
+
+            .paper-link.disabled:hover {
+                background: #bdc3c7;
+            }
+
+            .track-info {
+                background: #e8f4fd;
+                border: 1px solid #b3d9ff;
+                padding: 15px;
+                border-radius: 8px;
+                margin: 15px 0;
+            }
+
+            .track-info strong {
+                color: #2980b9;
+            }
+
+            .gratitude-section {
+                background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+                color: white;
+                text-align: center;
+            }
+
+            .gratitude-section h2 {
+                color: white;
+                border-bottom-color: rgba(255,255,255,0.3);
+            }
+
+            .gratitude-section p {
+                font-size: 1.1em;
+                line-height: 1.8;
+            }
+
+            @media (max-width: 768px) {
+                .paper-header {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 10px;
+                }
+                
+                .paper-time {
+                    align-self: flex-start;
+                }
+                
+                .paper-links {
+                    justify-content: flex-start;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="nav-placeholder"></div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="hero-section">
+                    <h1>IJCAI 2025</h1>
+                    <p>International Joint Conferences on Artificial Intelligence Organization</p>
+                    <p>Excited to present our research on AI for Social Good</p>
+                </div>
+
+                <div class="section">
+                    <h2>Conference Overview</h2>
+                    <p>So grateful to be part of Professor Nitesh Chawla's DIAL Lab at the Lucy Family Institute for Data & Society at the University of Notre Dame, where our work is grounded in Notre Dame's mission to pursue truth and advance knowledge in service to justice and the common good.</p>
+                    <p>At IJCAI International Joint Conferences on Artificial Intelligence Organization 2025, our lab has four papers that I'm excited to present:</p>
+                </div>
+
+                <div class="section">
+                    <h2>Paper Presentations</h2>
+                    
+                    <div class="paper-item">
+                        <div class="paper-header">
+                            <div>
+                                <h3>📍 Monday 9am - Doctoral Consortium</h3>
+                                <div class="track-info">
+                                    <strong>Track:</strong> Doctoral Consortium
+                                </div>
+                            </div>
+                            <div class="paper-time">Monday 9:00 AM</div>
+                        </div>
+                        <div class="paper-title">Measuring and Mitigating Homelessness Bias: Leveraging AI for Social Impact</div>
+                        <div class="paper-authors">Jonathan Karr</div>
+                        <div class="paper-links">
+                            <a href="https://docs.google.com/presentation/d/128B-KGPnF6QiCyFMPwDCwteAxlJGCWXn1_UZ94CMTK0/edit?usp=sharing" class="paper-link" target="_blank">Slides</a>
+                            <span class="paper-link disabled">No Poster (DC) / See AI for Social Good Track</span>
+                        </div>
+                    </div>
+
+                    <div class="paper-item">
+                        <div class="paper-header">
+                            <div>
+                                <h3>📍 Tuesday 3pm - AI For Social Good Track</h3>
+                                <div class="track-info">
+                                    <strong>Track:</strong> AI For Social Good
+                                </div>
+                            </div>
+                            <div class="paper-time">Tuesday 3:00 PM</div>
+                        </div>
+                        <div class="paper-title">What is Behind Homelessness Bias? Using LLMs and NLP to Mitigate Homelessness by Acting on Social Stigma</div>
+                        <div class="paper-authors">Jonathan Karr, Emory Smith, Matthew Hauenstein, Georgina Curto, PhD, MBA, Nitesh Chawla</div>
+                        <div class="paper-links">
+                            <a href="https://docs.google.com/presentation/d/1FF8BFIoCHQSQamH4eYcv7dIMSnzZtPhf-xHaEtAwB5Q/edit?usp=sharing" class="paper-link" target="_blank">Slides</a>
+                            <a href="documents/Combating_Homelessness_Stigma_with_LLMs:_A_New_Multi-Modal_Dataset_for_Bias_Detection.pdf" class="paper-link" target="_blank">Paper</a>
+                            <a href="https://docs.google.com/presentation/d/1EwD4Ff8i_p3li7x7hIk6_q6U27FS4tK97gKXbidqJL8/edit?usp=sharing" class="paper-link" target="_blank">Poster</a>
+                            <a href="https://ijcai-preprints.s3.us-west-1.amazonaws.com/2025/9041.pdf" class="paper-link" target="_blank">IJCAI Preprint</a>
+                        </div>
+
+                        <div class="paper-links" style="margin-top: 15px;">
+                            <a href="https://openreview.net/forum?id=sRswscWFgY" class="paper-link" target="_blank">Follow-up Paper: Can LLMs Contribute to Social Inclusion?</a>
+                        </div>
+                        <p style="margin-top: 10px; color: #7f8c8d; font-style: italic;"><strong>Note:</strong> Non-archival ACL SRW</p>
+                        <div class="paper-links" style="margin-top: 15px;">
+                            <a href="documents/Combating_Homelessness_Stigma_with_LLMs:_A_New_Multi-Modal_Dataset_for_Bias_Detection.pdf" class="paper-link" target="_blank">Follow-up Paper: Combating Homelessness Stigma with LLMs: A New Multi-Modal Dataset for Bias Detection</a>
+                        </div>
+                        <p style="margin-top: 10px; color: #27ae60; font-style: italic;"><strong>Note:</strong> arXiv version coming soon</p>
+                        <p style="margin-top: 10px; color: #e67e22; font-style: italic;"><strong>Recommendation:</strong> Go to the second follow-up paper - it has better results and more data!</p>
+                    </div>
+                    <div class="paper-links" style="margin-top: 15px;">
+                        <a href="https://github.com/Homelessness-Project/Multimodal-PEH-Classification" class="paper-link" target="_blank">Code</a>
+                        <a href="https://zenodo.org/records/16877412" class="paper-link" target="_blank">Dataset</a>
+                    </div>
+
+                    <div class="paper-item">
+                        <div class="paper-header">
+                            <div>
+                                <h3>📍 Tuesday 3pm - AI For Social Good Track</h3>
+                                <div class="track-info">
+                                    <strong>Track:</strong> AI For Social Good
+                                </div>
+                            </div>
+                            <div class="paper-time">Tuesday 3:00 PM</div>
+                        </div>
+                        <div class="paper-title">Leveraging Artificial Intelligence to Bridge Gaps in Pediatric Oncology Care for Marginalized Spanish-Speaking Communities</div>
+                        <div class="paper-authors">Grigorii Khvatsky, Angelica García-Martínez, Deng Pan, Matthew Belcher, Gerónimo Medrano Loera, Dayana Pineda Pérez, Juan Emmanuel Ferrari Muñoz-Ledo, Horacio Márquez-González, Nuno Moniz, Nitesh Chawla</div>
+                        <div class="paper-links">
+                            <a href="https://docs.google.com/presentation/d/1QEPHNFTFoB5Iu5TjkmPTBW3Vs4tZzVJEB90ypCQNQk8/edit?usp=sharing" class="paper-link" target="_blank">Slides</a>
+                            <a href="https://docs.google.com/presentation/d/1fCMM40u2ExM-2TP6cp7qQG3_hxMs7EEZsW6v0aE4-ZA/edit?usp=sharing" class="paper-link" target="_blank">Poster</a>
+                            <a href="https://ijcai-preprints.s3.us-west-1.amazonaws.com/2025/9173.pdf" class="paper-link" target="_blank">IJCAI Preprint</a>
+                        </div>
+                    </div>
+
+                    <div class="paper-item">
+                        <div class="paper-header">
+                            <div>
+                                <h3>📍 Friday 10am - Main Track (ETF: Explainability and interpretability)</h3>
+                                <div class="track-info">
+                                    <strong>Track:</strong> Main Track - ETF: Explainability and interpretability
+                                </div>
+                            </div>
+                            <div class="paper-time">Friday 10:00 AM</div>
+                        </div>
+                        <div class="paper-title">Fast Explanations via Policy Gradient-Optimized Explainer</div>
+                        <div class="paper-authors">Deng Pan, Nuno Moniz, Nitesh Chawla</div>
+                        <div class="paper-links">
+                            <span class="paper-link disabled">Slides - Coming Soon</span>
+                            <span class="paper-link disabled">Poster - Coming Soon</span>
+                            <a href="https://ijcai-preprints.s3.us-west-1.amazonaws.com/2025/5011.pdf" class="paper-link" target="_blank">IJCAI Preprint</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section gratitude-section">
+                    <h2>Looking Forward</h2>
+                    <p>Looking forward to sharing our work, learning from others at IJCAI, and continuing Notre Dame's commitment to using AI as a force for good.</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="footer-placeholder"></div>
+        </footer>
+    </body>
+</html>
