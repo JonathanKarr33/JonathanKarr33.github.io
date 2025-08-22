@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" type="image/png" href="favicon.png">
+        <title>Conferences - Jonathan Karr</title>
+        <!--Navigation bar -->
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+            $(function () {
+                $("#nav-placeholder").load("navbar.html");
+                $("#footer-placeholder").load("footer.html");
+            });
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            html, body {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header {
+                width: 100%;
+            }
+
+            main {
+                width: 100%;
+                max-width: 1200px;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .hero-section {
+                text-align: center;
+                margin-bottom: 40px;
+                padding: 40px 20px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                border-radius: 15px;
+            }
+
+            .hero-section h1 {
+                font-size: 3em;
+                margin-bottom: 20px;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            }
+
+            .section {
+                width: 100%;
+                background: #fff;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                margin-bottom: 30px;
+                box-sizing: border-box;
+            }
+
+            .section h2 {
+                color: #2c3e50;
+                font-size: 2.2em;
+                margin-bottom: 20px;
+                border-bottom: 3px solid #3498db;
+                padding-bottom: 10px;
+            }
+
+            .conference-item {
+                padding: 15px 0;
+                border-bottom: 1px solid #ecf0f1;
+            }
+
+            .conference-item:last-child {
+                border-bottom: none;
+            }
+
+            .conference-title {
+                font-weight: bold;
+                color: #2c3e50;
+                font-size: 1.2em;
+                margin-bottom: 5px;
+            }
+
+            .conference-status {
+                color: #7f8c8d;
+                font-style: italic;
+                margin-bottom: 5px;
+            }
+
+            .conference-link {
+                color: #3498db;
+                text-decoration: none;
+            }
+
+            .conference-link:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="nav-placeholder"></div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="hero-section">
+                    <h1>Conferences</h1>
+                </div>
+
+                <div class="section">
+                    <h2>Conference List</h2>
+                    
+                    <div class="conference-item">
+                        <div class="conference-title">ACL 2025</div>
+                        <div class="conference-status">Past</div>
+                    </div>
+
+                    <div class="conference-item">
+                        <div class="conference-title"><a href="ijcai25.html" class="conference-link">IJCAI 2025</a></div>
+                        <div class="conference-status">Current</div>
+                    </div>
+
+                    <div class="conference-item">
+                        <div class="conference-title">UNU Macau AI 25</div>
+                        <div class="conference-status">Future</div>
+                    </div>
+
+                    <div class="conference-item">
+                        <div class="conference-title">Adaptive Faith: Technology and Religious Change in the Digital Age</div>
+                        <div class="conference-status">Future</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="footer-placeholder"></div>
+        </footer>
+    </body>
+</html>
