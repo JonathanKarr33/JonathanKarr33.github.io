@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" type="image/png" href="favicon.png">
+        <title>Research Publications - Jonathan Karr</title>
+        <!--Navigation bar -->
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+            $(function () {
+                $("#nav-placeholder").load("navbar.html");
+                $("#footer-placeholder").load("footer.html");
+            });
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            html, body {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header {
+                width: 100%;
+            }
+
+            main {
+                width: 100%;
+                max-width: 1200px;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .hero-section {
+                text-align: center;
+                margin-bottom: 40px;
+                padding: 40px 20px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                border-radius: 15px;
+            }
+
+            .hero-section h1 {
+                font-size: 3em;
+                margin-bottom: 20px;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            }
+
+            .hero-section p {
+                font-size: 1.2em;
+                margin-bottom: 0;
+                opacity: 0.95;
+            }
+
+            .section {
+                width: 100%;
+                background: #fff;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                margin-bottom: 30px;
+                box-sizing: border-box;
+            }
+
+            .section h2 {
+                color: #2c3e50;
+                font-size: 2.2em;
+                margin-bottom: 20px;
+                border-bottom: 3px solid #3498db;
+                padding-bottom: 10px;
+            }
+
+            .section h3 {
+                color: #2980b9;
+                font-size: 1.6em;
+                margin: 25px 0 15px 0;
+            }
+
+            .section h4 {
+                color: #34495e;
+                font-size: 1.3em;
+                margin: 20px 0 10px 0;
+            }
+
+            .paper-item {
+                background: #f8f9fa;
+                border-left: 4px solid #3498db;
+                padding: 20px;
+                margin: 20px 0;
+                border-radius: 8px;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            .paper-item:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            }
+
+            .paper-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 15px;
+            }
+
+            .paper-time {
+                background: #e74c3c;
+                color: white;
+                padding: 8px 15px;
+                border-radius: 20px;
+                font-weight: bold;
+                font-size: 0.9em;
+                white-space: nowrap;
+            }
+
+            .paper-title {
+                font-weight: bold;
+                color: #2c3e50;
+                margin-bottom: 10px;
+                font-size: 1.1em;
+            }
+
+            .paper-authors {
+                color: #7f8c8d;
+                margin-bottom: 15px;
+                font-style: italic;
+            }
+
+            .paper-links {
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+
+            .paper-link {
+                display: inline-block;
+                padding: 8px 16px;
+                background: #3498db;
+                color: white;
+                text-decoration: none;
+                border-radius: 6px;
+                font-size: 0.9em;
+                transition: background 0.3s ease;
+            }
+
+            .paper-link:hover {
+                background: #2980b9;
+                color: white;
+                text-decoration: none;
+            }
+
+            .paper-link.disabled {
+                background: #bdc3c7;
+                cursor: not-allowed;
+            }
+
+            .paper-link.disabled:hover {
+                background: #bdc3c7;
+            }
+
+            .track-info {
+                background: #e8f4fd;
+                border: 1px solid #b3d9ff;
+                padding: 15px;
+                border-radius: 8px;
+                margin: 15px 0;
+            }
+
+            .track-info strong {
+                color: #2980b9;
+            }
+
+            .conference-header {
+                background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+                color: white;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .conference-header h2 {
+                color: white;
+                border-bottom-color: rgba(255,255,255,0.3);
+            }
+
+            .conference-header p {
+                font-size: 1.1em;
+                line-height: 1.8;
+            }
+
+            .status-badge {
+                display: inline-block;
+                padding: 4px 12px;
+                border-radius: 15px;
+                font-size: 0.8em;
+                font-weight: bold;
+                margin-left: 10px;
+            }
+
+            .status-current {
+                background: #27ae60;
+                color: white;
+            }
+
+            .status-past {
+                background: #95a5a6;
+                color: white;
+            }
+
+            .status-future {
+                background: #f39c12;
+                color: white;
+            }
+
+            @media (max-width: 768px) {
+                .paper-header {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 10px;
+                }
+                
+                .paper-time {
+                    align-self: flex-start;
+                }
+                
+                .paper-links {
+                    justify-content: flex-start;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="nav-placeholder"></div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="hero-section">
+                    <h1>Research Publications</h1>
+                    <p>Conference Papers, Presentations, Posters, and Research Works</p>
+                    <p>Research contributions across conferences, workshops, and other venues</p>
+                </div>
+
+                <!-- IJCAI 2025 Section -->
+                <div class="section conference-header">
+                    <h2>IJCAI 2025 <span class="status-badge status-past">Past</span></h2>
+                    <p>International Joint Conferences on Artificial Intelligence Organization</p>
+                </div>
+
+                <div class="section">
+                    <h3>Paper Presentations</h3>
+                    
+                    <div class="paper-item">
+                        <div class="paper-header">
+                            <div>
+                                <h4>📍 Doctoral Consortium</h4>
+                                <div class="track-info">
+                                    <strong>Track:</strong> Doctoral Consortium
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paper-title">Measuring and Mitigating Homelessness Bias: Leveraging AI for Social Impact</div>
+                        <div class="paper-authors">Jonathan Karr</div>
+                        <div class="paper-links">
+                            <a href="https://docs.google.com/presentation/d/128B-KGPnF6QiCyFMPwDCwteAxlJGCWXn1_UZ94CMTK0/edit?usp=sharing" class="paper-link" target="_blank">Slides</a>
+                            <span class="paper-link disabled">Paper - Coming Soon</span>
+                        </div>
+                    </div>
+
+                    <div class="paper-item">
+                        <div class="paper-header">
+                            <div>
+                                <h4>📍 AI For Social Good</h4>
+                                <div class="track-info">
+                                    <strong>Track:</strong> AI For Social Good
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paper-title">What is Behind Homelessness Bias? Using LLMs and NLP to Mitigate Homelessness by Acting on Social Stigma</div>
+                        <div class="paper-authors">Jonathan Karr, Emory Smith, Matthew Hauenstein, Georgina Curto, Nitesh Chawla</div>
+                        <div class="paper-links">
+                            <a href="https://docs.google.com/presentation/d/1FF8BFIoCHQSQamH4eYcv7dIMSnzZtPhf-xHaEtAwB5Q/edit?usp=sharing" class="paper-link" target="_blank">Slides</a>
+                            <a href="https://docs.google.com/presentation/d/1EwD4Ff8i_p3li7x7hIk6_q6U27FS4tK97gKXbidqJL8/edit?usp=sharing" class="paper-link" target="_blank">Poster</a>
+                            <a href="https://ijcai-preprints.s3.us-west-1.amazonaws.com/2025/9041.pdf" class="paper-link" target="_blank">IJCAI Preprint</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ACL 2025 Section -->
+                <div class="section conference-header">
+                    <h2>ACL 2025 <span class="status-badge status-past">Past</span></h2>
+                    <p>Association for Computational Linguistics</p>
+                    <p>Student Research Workshop</p>
+                </div>
+
+                <div class="section">
+                    <h3>Paper Presentations</h3>
+                    
+                    <div class="paper-item">
+                        <div class="paper-header">
+                            <div>
+                                <h4>📍 ACL SRW</h4>
+                                <div class="track-info">
+                                    <strong>Track:</strong> Student Research Workshop
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paper-title">Can LLMs Contribute to Social Inclusion?</div>
+                        <div class="paper-authors">Jonathan A. Karr Jr., Emory Smith, Matthew Hauenstein, Georgina Curto, Nitesh V. Chawla</div>
+                        <div class="paper-links">
+                            <a href="https://openreview.net/forum?id=sRswscWFgY" class="paper-link" target="_blank">OpenReview Paper</a>
+                        </div>
+                        <p style="margin-top: 10px; color: #7f8c8d; font-style: italic;"><strong>Note:</strong> Non-archival ACL SRW</p>
+                    </div>
+                </div>
+
+                <!-- Future Conferences Section -->
+                <div class="section conference-header">
+                    <h2>Future Conferences <span class="status-badge status-future">Upcoming</span></h2>
+                    <p>Research work in progress and planned submissions</p>
+                </div>
+
+                <div class="section">
+                    <h3>UNU Macau AI 25</h3>
+                    
+                    <div class="paper-item">
+                        <div class="paper-header">
+                            <div>
+                                <h4>📍 UNU Macau AI 25</h4>
+                                <div class="track-info">
+                                    <strong>Status:</strong> Accepted
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paper-title">Non-Archival Research Paper</div>
+                        <div class="paper-authors">Jonathan A. Karr Jr., Benjamin F. Herbst, Ting Hua, Matthew Hauenstein, Georgina Curto, Nitesh V. Chawla</div>
+                        <div class="paper-links">
+                            <span class="paper-link disabled">Details Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Adaptive Faith: Technology and Religious Change in the Digital Age</h3>
+                    
+                    <div class="paper-item">
+                        <div class="paper-header">
+                            <div>
+                                <h4>📍 Adaptive Faith Conference</h4>
+                                <div class="track-info">
+                                    <strong>Status:</strong> Tentative Acceptance
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paper-title">Equivocation and Erosion: How LLMs Undermine Catholic Religious Discourse</div>
+                        <div class="paper-authors">Jonathan A. Karr Jr., Matthew Lad, Demetrius Hernandez, Louisa Conwill, Walter J. Scheirer, Nitesh V. Chawla</div>
+                        <div class="paper-links">
+                            <a href="documents/adaptive_faith_abstract.pdf" class="paper-link" target="_blank">Abstract</a>
+                            <span class="paper-link disabled">Paper - Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- arXiv and Preprint Publications Section -->
+                <div class="section conference-header">
+                    <h2>arXiv & Preprint Publications <span class="status-badge status-current">Published</span></h2>
+                    <p>Research papers published on arXiv and other preprint servers</p>
+                </div>
+
+                <div class="section">
+                    <h3>Published Papers</h3>
+                    
+                    <div class="paper-item">
+                        <div class="paper-header">
+                            <div>
+                                <h4>📍 Homelessness Bias Research</h4>
+                                <div class="track-info">
+                                    <strong>Venue:</strong> arXiv Preprint
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paper-title">Combating Homelessness Stigma with LLMs: A New Multi-Modal Dataset for Bias Detection</div>
+                        <div class="paper-authors">Jonathan A. Karr Jr., Benjamin F. Herbst, Ting Hua, Matthew Hauenstein, Georgina Curto, Nitesh V. Chawla</div>
+                        <div class="paper-links">
+                            <a href="https://arxiv.org/html/2508.13187v1#Sx6" class="paper-link" target="_blank">arXiv Paper</a>
+                            <a href="https://github.com/Homelessness-Project/Multimodal-PEH-Classification" class="paper-link" target="_blank">Code</a>
+                            <a href="https://zenodo.org/records/16877412" class="paper-link" target="_blank">Dataset</a>
+                        </div>
+
+                    </div>
+
+                    <div class="paper-item">
+                        <div class="paper-header">
+                            <div>
+                                <h4>📍 Trusted Knowledge Extraction</h4>
+                                <div class="track-info">
+                                    <strong>Venue:</strong> arXiv Preprint
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paper-title">Trusted Knowledge Extraction for Operations and Maintenance Intelligence</div>
+                        <div class="paper-authors">Kathleen Mealey, Jonathan A. Karr Jr., Priscila Saboia Moreira, Paul R. Brenner, Charles F. Vardeman II</div>
+                        <div class="paper-links">
+                            <a href="https://arxiv.org/abs/2507.22935" class="paper-link" target="_blank">arXiv Paper</a>
+                        </div>
+                    </div>
+
+                    <div class="paper-item">
+                        <div class="paper-header">
+                            <div>
+                                <h4>📍 New arXiv Publication</h4>
+                                <div class="track-info">
+                                    <strong>Venue:</strong> arXiv Preprint
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paper-title">TBD - New Research Paper</div>
+                        <div class="paper-authors">Jonathan A. Karr Jr., Benjamin F. Herbst, Ting Hua, Matthew Hauenstein, Georgina Curto, Nitesh V. Chawla</div>
+                        <div class="paper-links">
+                            <span class="paper-link disabled">arXiv Link - Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Works in Progress Section -->
+                <div class="section conference-header">
+                    <h2>Works in Progress <span class="status-badge status-future">In Development</span></h2>
+                    <p>Research papers and projects currently in development</p>
+                </div>
+
+                <div class="section">
+                    <h3>Upcoming Publications</h3>
+                    
+                    <div class="paper-item">
+                        <div class="paper-header">
+                            <div>
+                                <h4>📍 National Running Club Database</h4>
+                                <div class="track-info">
+                                    <strong>Status:</strong> Coming to arXiv in 1 week
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paper-title">National Running Club Database: Assessing Collegiate Club Athletes' Cross Country Race Results</div>
+                        <div class="paper-authors">Jonathan A. Karr Jr, Ben Darden, Nicholas Pell, Ryan M. Fryer, Kayla Ambrose, Evan Hall, Ramzi K. Bualuan, and Nitesh V. Chawla</div>
+                        <div class="paper-links">
+                            <span class="paper-link disabled">Paper - Coming to arXiv in 1 week</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section conference-header">
+                    <h2>Research Impact</h2>
+                    <p>Grateful to be part of Professor Nitesh Chawla's DIAL Lab at the Lucy Family Institute for Data & Society at the University of Notre Dame, where our work is grounded in Notre Dame's mission to pursue truth and advance knowledge in service to justice and the common good.</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="footer-placeholder"></div>
+        </footer>
+    </body>
+</html>
