@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" type="image/png" href="favicon.png">
+        <title>UNU Macau AI 2025 - Jonathan Karr</title>
+        <!--Navigation bar -->
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+            $(function () {
+                $("#nav-placeholder").load("navbar.html");
+                $("#footer-placeholder").load("footer.html");
+            });
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            html, body {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header {
+                width: 100%;
+            }
+
+            main {
+                width: 100%;
+                max-width: 1200px;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .hero-section {
+                text-align: center;
+                margin-bottom: 40px;
+                padding: 40px 20px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                border-radius: 15px;
+            }
+
+            .hero-section h1 {
+                font-size: 3em;
+                margin-bottom: 20px;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            }
+
+            .hero-section p {
+                font-size: 1.2em;
+                margin-bottom: 0;
+                opacity: 0.95;
+            }
+
+            .section {
+                width: 100%;
+                background: #fff;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                margin-bottom: 30px;
+                box-sizing: border-box;
+            }
+
+            .section h2 {
+                color: #2c3e50;
+                font-size: 2.2em;
+                margin-bottom: 20px;
+                border-bottom: 3px solid #3498db;
+                padding-bottom: 10px;
+            }
+
+            .section h3 {
+                color: #2980b9;
+                font-size: 1.6em;
+                margin: 25px 0 15px 0;
+            }
+
+            .section h4 {
+                color: #34495e;
+                font-size: 1.3em;
+                margin: 20px 0 10px 0;
+            }
+
+            .paper-item {
+                background: #f8f9fa;
+                border-left: 4px solid #3498db;
+                padding: 20px;
+                margin: 20px 0;
+                border-radius: 8px;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            .paper-item:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            }
+
+            .paper-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 15px;
+            }
+
+            .paper-time {
+                background: #e74c3c;
+                color: white;
+                padding: 8px 15px;
+                border-radius: 20px;
+                font-weight: bold;
+                font-size: 0.9em;
+                white-space: nowrap;
+            }
+
+            .paper-title {
+                font-weight: bold;
+                color: #2c3e50;
+                margin-bottom: 10px;
+                font-size: 1.1em;
+            }
+
+            .paper-authors {
+                color: #7f8c8d;
+                margin-bottom: 15px;
+                font-style: italic;
+            }
+
+            .paper-links {
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+
+            .paper-link {
+                display: inline-block;
+                padding: 8px 16px;
+                background: #3498db;
+                color: white;
+                text-decoration: none;
+                border-radius: 6px;
+                font-size: 0.9em;
+                transition: background 0.3s ease;
+            }
+
+            .paper-link:hover {
+                background: #2980b9;
+                color: white;
+                text-decoration: none;
+            }
+
+            .paper-link.disabled {
+                background: #bdc3c7;
+                cursor: not-allowed;
+            }
+
+            .paper-link.disabled:hover {
+                background: #bdc3c7;
+            }
+
+            .track-info {
+                background: #e8f4fd;
+                border: 1px solid #b3d9ff;
+                padding: 15px;
+                border-radius: 8px;
+                margin: 15px 0;
+            }
+
+            .track-info strong {
+                color: #2980b9;
+            }
+
+            .session-info {
+                background: #f0f8ff;
+                border: 1px solid #87ceeb;
+                padding: 15px;
+                border-radius: 8px;
+                margin: 15px 0;
+            }
+
+            .session-info strong {
+                color: #1e90ff;
+            }
+
+            .gratitude-section {
+                background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+                color: white;
+                text-align: center;
+            }
+
+            .gratitude-section h2 {
+                color: white;
+                border-bottom-color: rgba(255,255,255,0.3);
+            }
+
+            .gratitude-section p {
+                font-size: 1.1em;
+                line-height: 1.8;
+            }
+
+            @media (max-width: 768px) {
+                .paper-header {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 10px;
+                }
+                
+                .paper-time {
+                    align-self: flex-start;
+                }
+                
+                .paper-links {
+                    justify-content: flex-start;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="nav-placeholder"></div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="hero-section">
+                    <h1>UNU Macau AI 2025</h1>
+                    <p>AI for Humanity: Building an Equitable Digital Future</p>
+                    <p>Macau SAR, China • October 24, 2025</p>
+                    <p>Galaxy International Convention Center</p>
+                    <p>Excited to present our research on AI Ethics and Social Impact</p>
+                    <p style="margin-top: 20px;"><a href="https://unu.edu/macau/event/ai-ethics" target="_blank" style="color: white; text-decoration: underline; font-weight: bold;">Official Conference Website →</a></p>
+                </div>
+
+                <div class="section">
+                    <h2>Conference Overview</h2>
+                    <p>So grateful to be part of Professor Nitesh Chawla's DIAL Lab at the Lucy Family Institute for Data & Society at the University of Notre Dame, where our work is grounded in Notre Dame's mission to pursue truth and advance knowledge in service to justice and the common good.</p>
+                    <p>At the UNU Macau AI Conference 2025, I'm excited to present our research on using AI to address social bias and promote equity in digital spaces.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Session Information</h2>
+                    
+                    <div class="session-info">
+                        <strong>Session:</strong> AI + Ethics<br>
+                        <strong>Date:</strong> October 24, 2025<br>
+                        <strong>Time:</strong> 10:30 - 11:30 AM<br>
+                        <strong>Location:</strong> Galaxy International Convention Center, Meeting Room 8
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Paper Presentation</h2>
+                    
+                    <div class="paper-item">
+                        <div class="paper-header">
+                            <div>
+                                <h3>📍 AI + Ethics Session</h3>
+                                <div class="track-info">
+                                    <strong>Track:</strong> AI Ethics and Social Impact
+                                </div>
+                            </div>
+                            <div class="paper-time">Oct 24, 10:30 AM</div>
+                        </div>
+                        <div class="paper-title">Using Local LLMs to Assess and Address Online Homelessness Bias</div>
+                        <div class="paper-authors">Jonathan Karr</div>
+                        <div class="paper-links">
+                            <a href="https://arxiv.org/abs/2508.13187v2" class="paper-link" target="_blank">arXiv v2</a>
+                            <a href="documents/Combating_Homelessness_Stigma_with_LLMs:_A_New_Multi-Modal_Dataset_for_Bias_Detection.pdf" class="paper-link" target="_blank">Local v3</a>
+                            <span class="paper-link disabled">Slides - Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="section">
+                    <h2>Related Research</h2>
+                    
+                    <div class="paper-item">
+                        <div class="paper-header">
+                            <div>
+                                <h3>📍 Multi-Modal Dataset Research</h3>
+                                <div class="track-info">
+                                    <strong>Status:</strong> Published Research
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paper-title">Combating Homelessness Stigma with LLMs: A New Multi-Modal Dataset for Bias Detection</div>
+                        <div class="paper-authors">Jonathan A. Karr Jr., Benjamin F. Herbst, Ting Hua, Matthew Hauenstein, Georgina Curto, Nitesh V. Chawla</div>
+                        <div class="paper-links">
+                            <a href="https://arxiv.org/abs/2508.13187v2" class="paper-link" target="_blank">arXiv v2</a>
+                            <a href="documents/Combating_Homelessness_Stigma_with_LLMs:_A_New_Multi-Modal_Dataset_for_Bias_Detection.pdf" class="paper-link" target="_blank">Local v3</a>
+                            <a href="https://github.com/Homelessness-Project/Multimodal-PEH-Classification" class="paper-link" target="_blank">Code</a>
+                            <a href="https://zenodo.org/records/16877412" class="paper-link" target="_blank">Dataset</a>
+                        </div>
+                        <p style="margin-top: 10px; color: #7f8c8d; font-style: italic;"><strong>Abstract:</strong> This research introduces methods leveraging large language models (LLMs) to identify and measure social bias against people experiencing homelessness (PEH) in digital spaces. The study presents a manually-annotated multi-modal dataset compiled from various online sources, providing evidence of homelessness bias typologies.</p>
+                    </div>
+                </div>
+
+                <div class="section gratitude-section">
+                    <h2>Looking Forward</h2>
+                    <p>Looking forward to sharing our work on AI ethics and social impact, learning from other researchers at UNU Macau AI 2025, and continuing Notre Dame's commitment to using AI as a force for good and equity.</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="footer-placeholder"></div>
+        </footer>
+    </body>
+</html>

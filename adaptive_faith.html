@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" type="image/png" href="favicon.png">
+        <title>Adaptive Faith Conference - Jonathan Karr</title>
+        <!--Navigation bar -->
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+            $(function () {
+                $("#nav-placeholder").load("navbar.html");
+                $("#footer-placeholder").load("footer.html");
+            });
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            html, body {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header {
+                width: 100%;
+            }
+
+            main {
+                width: 100%;
+                max-width: 1200px;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .hero-section {
+                text-align: center;
+                margin-bottom: 40px;
+                padding: 40px 20px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                border-radius: 15px;
+            }
+
+            .hero-section h1 {
+                font-size: 3em;
+                margin-bottom: 20px;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            }
+
+            .hero-section p {
+                font-size: 1.2em;
+                margin-bottom: 0;
+                opacity: 0.95;
+            }
+
+            .section {
+                width: 100%;
+                background: #fff;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                margin-bottom: 30px;
+                box-sizing: border-box;
+            }
+
+            .section h2 {
+                color: #2c3e50;
+                font-size: 2.2em;
+                margin-bottom: 20px;
+                border-bottom: 3px solid #3498db;
+                padding-bottom: 10px;
+            }
+
+            .section h3 {
+                color: #2980b9;
+                font-size: 1.6em;
+                margin: 25px 0 15px 0;
+            }
+
+            .section h4 {
+                color: #34495e;
+                font-size: 1.3em;
+                margin: 20px 0 10px 0;
+            }
+
+            .paper-item {
+                background: #f8f9fa;
+                border-left: 4px solid #3498db;
+                padding: 20px;
+                margin: 20px 0;
+                border-radius: 8px;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            .paper-item:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            }
+
+            .paper-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 15px;
+            }
+
+            .paper-time {
+                background: #e74c3c;
+                color: white;
+                padding: 8px 15px;
+                border-radius: 20px;
+                font-weight: bold;
+                font-size: 0.9em;
+                white-space: nowrap;
+            }
+
+            .paper-title {
+                font-weight: bold;
+                color: #2c3e50;
+                margin-bottom: 10px;
+                font-size: 1.1em;
+            }
+
+            .paper-authors {
+                color: #7f8c8d;
+                margin-bottom: 15px;
+                font-style: italic;
+            }
+
+            .paper-links {
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+
+            .paper-link {
+                display: inline-block;
+                padding: 8px 16px;
+                background: #3498db;
+                color: white;
+                text-decoration: none;
+                border-radius: 6px;
+                font-size: 0.9em;
+                transition: background 0.3s ease;
+            }
+
+            .paper-link:hover {
+                background: #2980b9;
+                color: white;
+                text-decoration: none;
+            }
+
+            .paper-link.disabled {
+                background: #bdc3c7;
+                cursor: not-allowed;
+            }
+
+            .paper-link.disabled:hover {
+                background: #bdc3c7;
+            }
+
+            .track-info {
+                background: #e8f4fd;
+                border: 1px solid #b3d9ff;
+                padding: 15px;
+                border-radius: 8px;
+                margin: 15px 0;
+            }
+
+            .track-info strong {
+                color: #2980b9;
+            }
+
+            .gratitude-section {
+                background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+                color: white;
+                text-align: center;
+            }
+
+            .gratitude-section h2 {
+                color: white;
+                border-bottom-color: rgba(255,255,255,0.3);
+            }
+
+            .gratitude-section p {
+                font-size: 1.1em;
+                line-height: 1.8;
+            }
+
+            @media (max-width: 768px) {
+                .paper-header {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 10px;
+                }
+                
+                .paper-time {
+                    align-self: flex-start;
+                }
+                
+                .paper-links {
+                    justify-content: flex-start;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="nav-placeholder"></div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="hero-section">
+                    <h1>Adaptive Faith</h1>
+                    <p>Technology and Religious Change in the Digital Age</p>
+                    <p>Centre for Inter-Religious Studies (CIRS)</p>
+                    <p>Al-Mahdi Institute • Birmingham, UK</p>
+                    <p>November 3-4, 2025</p>
+                    <p>Excited to present research on LLMs and Catholic religious discourse</p>
+                    <p style="margin-top: 20px;"><a href="https://almahdi.edu/registration-now-open-for-the-adaptive-faith-technology-and-religious-change-in-the-digital-age-conference/" target="_blank" style="color: white; text-decoration: underline; font-weight: bold;">Conference Registration →</a></p>
+                    <p><a href="https://almahdi.edu/wp-content/uploads/2025/10/Final-Itinerary-CIRS.pdf" target="_blank" style="color: white; text-decoration: underline; font-weight: bold;">Conference Program →</a></p>
+                </div>
+
+                <div class="section">
+                    <h2>Conference Overview</h2>
+                    <p>Honored to be presenting at the Adaptive Faith conference, exploring how technology intersects with religious practice and discourse in our digital age. This interdisciplinary conference brings together scholars, theologians, and technologists to examine the profound ways technology is reshaping religious experience and understanding.</p>
+                    <p>Organized by the Centre for Inter-Religious Studies at Al-Mahdi Institute, in collaboration with the McLean Centre for the Study of Culture and Values at the Catholic University of America, and supported by the Ansari Institute for Global Engagement with Religion at the Keough School of Global Affairs, University of Notre Dame.</p>
+                    <p>Our research examines how Large Language Models (LLMs) interact with Catholic religious discourse, revealing important insights about the challenges and opportunities technology presents for religious communities.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Paper Presentation</h2>
+                    
+                    <div class="paper-item">
+                        <div class="paper-header">
+                            <div>
+                                <h3>📍 Panel Four - Day Two</h3>
+                                <div class="track-info">
+                                    <strong>Track:</strong> Technology and Religious Discourse<br>
+                                    <strong>Date:</strong> November 4, 2025<br>
+                                    <strong>Time:</strong> 10:45 - 12:15
+                                </div>
+                            </div>
+                            <div class="paper-time">Nov 4, 10:45 AM</div>
+                        </div>
+                        <div class="paper-title">Equivocation and Erosion: How LLMs Undermine Catholic Religious Discourse</div>
+                        <div class="paper-authors">Jonathan A. Karr Jr., Matthew Lad, Demetrius Hernandez, Louisa Conwill, Walter J. Scheirer, Nitesh V. Chawla</div>
+                        <div class="paper-links">
+                            <a href="documents/adaptive_faith_abstract.pdf" class="paper-link" target="_blank">Abstract</a>
+                            <a href="https://almahdi.edu/wp-content/uploads/2025/10/Final-Itinerary-CIRS.pdf" class="paper-link" target="_blank">Conference Program</a>
+                            <span class="paper-link disabled">Full Paper - Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Conference Schedule</h2>
+                    <p><strong>Day One - November 3, 2025:</strong></p>
+                    <ul>
+                        <li>10:00-10:30: Registration</li>
+                        <li>10:30-10:35: Welcome Remarks by Dr. Muhammed R. Tajri</li>
+                        <li>10:35-10:45: Conference Introduction by Prof. William A. Barbieri</li>
+                        <li>10:45-11:45: Panel One: "Ethics, Human Nature, and AI's Challenge"</li>
+                        <li>11:45-12:15: Tour of Al-Mahdi Institute and AMI Library (optional)</li>
+                        <li>12:15-13:15: Prayers and Lunch</li>
+                        <li>13:15-14:45: Panel Two: "Engaging Technology from Noodiverse and Local Perspectives"</li>
+                        <li>14:45-15:00: Tea/Coffee Break</li>
+                        <li>15:00-16:30: Panel Three: "Techno-Gnosticism for the Digital Age: AI, Transhumanism, and the Flight from Embodiment"</li>
+                        <li>17:00-19:00: Dinner</li>
+                    </ul>
+                    
+                    <p><strong>Day Two - November 4, 2025:</strong></p>
+                    <ul>
+                        <li>10:30-10:45: Registration</li>
+                        <li><strong>10:45-12:15: Panel Four (Our Presentation)</strong></li>
+                        <li>12:15-13:15: Prayers and Lunch</li>
+                        <li>13:15-14:15: Panel Five</li>
+                        <li>14:15-14:30: Tea/Coffee Break</li>
+                        <li>14:30-15:30: Panel Six</li>
+                        <li>15:30-15:50: Closing Remarks</li>
+                        <li>16:00-18:00: Dinner</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Research Context</h2>
+                    <p>This work emerges from our broader research agenda at the University of Notre Dame's DIAL Lab, where we explore how artificial intelligence intersects with social issues and human values. The intersection of technology and religion represents a critical frontier for understanding how AI systems shape human understanding and practice.</p>
+                    
+                    <h3>Key Research Questions</h3>
+                    <ul>
+                        <li>How do Large Language Models handle religious concepts and terminology?</li>
+                        <li>What are the implications of AI-generated religious content for faith communities?</li>
+                        <li>How can we develop AI systems that respect religious diversity and authenticity?</li>
+                        <li>What role should technology play in religious education and discourse?</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Other Research</h2>
+                    <p><a href="research_publications.html" class="paper-link" target="_blank">View All Research Publications</a></p>
+                </div>
+
+                <div class="section">
+                    <h2>Registration</h2>
+                    <p><a href="https://almahdi.edu/registration-now-open-for-the-adaptive-faith-technology-and-religious-change-in-the-digital-age-conference/" class="paper-link" target="_blank">Conference Registration</a></p>
+                </div>
+
+                <div class="section gratitude-section">
+                    <h2>Looking Forward</h2>
+                    <p>Excited to engage with scholars and practitioners at the Adaptive Faith conference, exploring how technology can serve religious communities while respecting their traditions and values. This interdisciplinary dialogue is essential for developing AI systems that enhance rather than undermine human flourishing.</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="footer-placeholder"></div>
+        </footer>
+    </body>
+</html>
+
